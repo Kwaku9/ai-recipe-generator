@@ -11,6 +11,29 @@
       "StackId": "arn:aws:cloudformation:us-east-1:523069754952:stack/amplify-buildfolio-prod-c5017/ff2bbe20-9cc2-11ef-ae47-0e54817f7013",
       "AmplifyAppId": "d8t43gj7fc601",
       "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-buildfolio-prod-c5017-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "buildfolio5ae8b10a5ae8b10a": {
+          "googleClientId": "728734516978-crs18n8k4s3g2bgtcdlg1ru4eiksiue8.apps.googleusercontent.com"
+        },
+        "userPoolGroups": {}
+      },
+      "function": {
+        "buildfolio5ae8b10a5ae8b10aPostConfirmation": {
+          "GROUP": "Others",
+          "deploymentBucketName": "amplify-buildfolio-prod-c5017-deployment",
+          "s3Key": "amplify-builds/buildfolio5ae8b10a5ae8b10aPostConfirmation-736d706c2b4846646b4d-build.zip"
+        },
+        "AdminQueriesd38fe01d": {
+          "deploymentBucketName": "amplify-buildfolio-prod-c5017-deployment",
+          "s3Key": "amplify-builds/AdminQueriesd38fe01d-45626c506f714d77666a-build.zip"
+        },
+        "buildfolio5ae8b10a5ae8b10aPreTokenGeneration": {
+          "deploymentBucketName": "amplify-buildfolio-prod-c5017-deployment",
+          "s3Key": "amplify-builds/buildfolio5ae8b10a5ae8b10aPreTokenGeneration-74386e4778724f4b5679-build.zip"
+        }
+      }
     }
   }
 }

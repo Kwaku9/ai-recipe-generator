@@ -1,0 +1,82 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "buildfolio5ae8b10a_identitypool_5ae8b10a",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "buildf5ae8b10a",
+    "userPoolName": "buildfolio5ae8b10a_userpool_5ae8b10a",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "ON",
+    "mfaTypes": [
+      "SMS Text Message",
+      "TOTP"
+    ],
+    "smsAuthenticationMessage": "Your buildfol.io auth code is {####} please enter this to complete your secure registration.",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your buildfol.io verification code",
+    "emailVerificationMessage": "Your buildfol.io verification code is {####} please enter this to complete your secure registration.",
+    "defaultPasswordPolicy": true,
+    "passwordPolicyMinLength": "12",
+    "passwordPolicyCharacters": [
+      "Requires Lowercase",
+      "Requires Uppercase",
+      "Requires Numbers",
+      "Requires Symbols"
+    ],
+    "requiredAttributes": [
+      "email",
+      "given_name"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": "7",
+    "userpoolClientWriteAttributes": [
+      "email",
+      "given_name"
+    ],
+    "userpoolClientReadAttributes": [
+      "email",
+      "given_name"
+    ],
+    "userpoolClientLambdaRole": "buildf5ae8b10a_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "sharedId": "5ae8b10a",
+    "resourceName": "buildfolio5ae8b10a5ae8b10a",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "manual",
+    "thirdPartyAuth": true,
+    "authProviders": [
+      "accounts.google.com"
+    ],
+    "usernameAttributes": [
+      "email"
+    ],
+    "userPoolGroups": true,
+    "adminQueries": true,
+    "triggers": {
+      "PostConfirmation": [
+        "add-to-group"
+      ],
+      "PreTokenGeneration": [
+        "alter-claims"
+      ]
+    },
+    "hostedUI": true,
+    "hostedUIDomainName": "buildfolio5ae8b10a-5ae8b10a",
+    "authProvidersUserPool": [
+      "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"given_name\":\"given_name\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://buildfol.io/\"],\"LogoutURLs\":[\"https://buildfol.io/\"]}",
+    "userPoolGroupList": [
+      "Others",
+      "Prospects"
+    ],
+    "adminQueryGroup": "Others",
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "alter-claims"
+  ],
+  "parentResource": "buildfolio5ae8b10a5ae8b10a",
+  "functionName": "buildfolio5ae8b10a5ae8b10aPreTokenGeneration",
+  "resourceName": "buildfolio5ae8b10a5ae8b10aPreTokenGeneration",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "C:\\snapshot\\amplify-cli\\build\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PreTokenGeneration",
+  "triggerTemplate": "PreTokenGeneration.json.ejs",
+  "triggerEventPath": "PreTokenGeneration.event.json",
+  "roleName": "buildfolio5ae8b10a5ae8b10aPreTokenGeneration",
+  "skipEdit": true
+}

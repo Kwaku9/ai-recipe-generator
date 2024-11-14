@@ -1,0 +1,190 @@
+{
+  "api": {
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "buildfolio5ae8b10a5ae8b10a"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "AdminQueriesd38fe01d"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "buildfolio5ae8b10a5ae8b10a": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "buildfolio5ae8b10a5ae8b10aPostConfirmation",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "buildfolio5ae8b10a5ae8b10aPreTokenGeneration",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "ON",
+        "mfaTypes": [
+          "SMS",
+          "TOTP"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ],
+          "passwordPolicyMinLength": "12"
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "GIVEN_NAME"
+        ],
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "buildfolio5ae8b10a5ae8b10a"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    }
+  },
+  "function": {
+    "AdminQueriesd38fe01d": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "buildfolio5ae8b10a5ae8b10a"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "buildfolio5ae8b10a5ae8b10aPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "buildfolio5ae8b10a5ae8b10aPreTokenGeneration": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_buildfolio5ae8b10a5ae8b10a_googleClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "buildfolio5ae8b10a5ae8b10a"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesd38fe01d_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesd38fe01d"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesd38fe01d_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesd38fe01d"
+        }
+      ]
+    },
+    "AMPLIFY_function_buildfolio5ae8b10a5ae8b10aPostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buildfolio5ae8b10a5ae8b10aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_buildfolio5ae8b10a5ae8b10aPostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buildfolio5ae8b10a5ae8b10aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_buildfolio5ae8b10a5ae8b10aPostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buildfolio5ae8b10a5ae8b10aPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_buildfolio5ae8b10a5ae8b10aPreTokenGeneration_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buildfolio5ae8b10a5ae8b10aPreTokenGeneration"
+        }
+      ]
+    },
+    "AMPLIFY_function_buildfolio5ae8b10a5ae8b10aPreTokenGeneration_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buildfolio5ae8b10a5ae8b10aPreTokenGeneration"
+        }
+      ]
+    }
+  }
+}
