@@ -1,0 +1,16 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-buildfolio-prod-c5017-authRole",
+      "UnauthRoleArn": "arn:aws:iam::523069754952:role/amplify-buildfolio-prod-c5017-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::523069754952:role/amplify-buildfolio-prod-c5017-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-buildfolio-prod-c5017-deployment",
+      "UnauthRoleName": "amplify-buildfolio-prod-c5017-unauthRole",
+      "StackName": "amplify-buildfolio-prod-c5017",
+      "StackId": "arn:aws:cloudformation:us-east-1:523069754952:stack/amplify-buildfolio-prod-c5017/ff2bbe20-9cc2-11ef-ae47-0e54817f7013",
+      "AmplifyAppId": "d8t43gj7fc601",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-buildfolio-prod-c5017-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    }
+  }
+}
